@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans bg-white dark:bg-stone-950 transition-colors duration-300; }
+}
+
+/* Custom scrollbar for dark mode */
+@layer utilities {
+  .dark ::-webkit-scrollbar { width: 6px; }
+  .dark ::-webkit-scrollbar-track { background: #1c1917; }
+  .dark ::-webkit-scrollbar-thumb { background: #44403c; border-radius: 3px; }
+}
