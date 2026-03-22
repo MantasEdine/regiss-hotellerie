@@ -112,7 +112,7 @@ export function useContactForm(initialFields) {
       )
       await emailjs.send(
   CONFIG.emailjs.serviceId,
-  'template_autoreply',
+  'template_y7n7mqk',
   {
     to_name:  fields.name || fields.contact || '',
     to_email: fields.email || '',
