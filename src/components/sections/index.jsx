@@ -104,7 +104,7 @@ export function ValueCard({ value }) {
 // ─────────────────────────────────────────
 export function CTASection() {
   const { fields, handleChange, handleSubmit, status, message } = useContactForm({
-    contact: '', hotel: '', email: '', message: '',
+    contact: '', hotel: '',phone : '', email: '', message: '',
   })
 
   const perks = [
@@ -154,6 +154,7 @@ export function CTASection() {
               <FormField label="Hôtel" value={fields.hotel} onChange={handleChange('hotel')} placeholder="Nom de l'hôtel" required />
             </div>
             <FormField label="Email" type="email" value={fields.email} onChange={handleChange('email')} placeholder="direction@hotel.fr" required />
+            <FormField label="Téléphone" type="tel" value={fields.phone} onChange={handleChange('phone')} placeholder="+33 6 XX XX XX XX" required />
             <FormField label="Message" type="textarea" value={fields.message} onChange={handleChange('message')} placeholder="Décrivez votre besoin..." required rows={4} />
             {message && (
               <p className={`text-sm font-medium ${status === 'success' ? 'text-green-600' : 'text-red-500'}`}>{message}</p>
@@ -227,7 +228,7 @@ export function ContactForm() {
         </div>
         <div className="grid grid-cols-2 gap-3">
           <FormField label="Email" type="email" value={fields.email} onChange={handleChange('email')} placeholder="direction@hotel.fr" required />
-          <FormField label="Téléphone" type="tel" value={fields.phone} onChange={handleChange('phone')} placeholder="+33 6 XX XX XX XX" />
+          <FormField label="Téléphone" type="tel" value={fields.phone} onChange={handleChange('phone')} placeholder="+33 6 XX XX XX XX" required />
         </div>
         <FormField label="Prestation souhaitée" type="select" value={fields.service} onChange={handleChange('service')} options={SERVICE_OPTIONS} />
         <div className="grid grid-cols-2 gap-3">

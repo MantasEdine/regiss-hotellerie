@@ -15,13 +15,13 @@ export default function Logo({ size = 40, inline = true }) {
 
       {/* ── Exact diamond from your logo (transparent PNG) ── */}
       <img
-        src={DIAMOND_IMG}
-        alt="REGIIS logo"
         style={{
-          height: size + 'px',
-          width: 'auto',
-          display: 'block',
-        }}
+  height: size + 'px',
+  width: 'auto',
+  display: 'block',
+  transform: 'scaleY(1.25)',
+  transformOrigin: 'top center',
+}}
       />
 
       {/* ── Wordmark ── */}

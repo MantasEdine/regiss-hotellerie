@@ -110,6 +110,15 @@ export function useContactForm(initialFields) {
         },
         CONFIG.emailjs.publicKey
       )
+      await emailjs.send(
+  CONFIG.emailjs.serviceId,
+  'template_autoreply',
+  {
+    to_name:  fields.name || fields.contact || '',
+    to_email: fields.email || '',
+  },
+  CONFIG.emailjs.publicKey
+)
 
       setStatus('success')
       setMessage('✅ Message envoyé ! Nous vous répondons sous 1h.')

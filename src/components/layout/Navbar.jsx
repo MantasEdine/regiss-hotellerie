@@ -27,8 +27,15 @@ export default function Navbar() {
       {/* ── TOPBAR ── */}
       <div className="bg-mauve-700 dark:bg-mauve-900 px-4 md:px-16 py-2 flex flex-wrap justify-between items-center gap-1">
         <p className="text-mauve-200 text-[11px]">
-          📞 Permanence 24h/24 · 7j/7 — WhatsApp & SMS : +33 6 52 92 03 87
-        </p>
+  Permanence 24h/24 · 7j/7 —{' '}
+  <a href="tel:+33652920387" className="hover:text-white transition-colors">
+    📞 +33 6 52 92 03 87
+  </a>
+  {' · '}
+  <a href="https://wa.me/33652920387" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+    💬 WhatsApp
+  </a>
+</p>
         <div className="flex gap-4 text-[11px] text-mauve-200">
           <button onClick={goContact} className="hover:text-white transition-colors">
             contact@regiis.fr
@@ -218,7 +225,7 @@ function NavLogo() {
           /* The cropped PNG has some transparent space at the bottom.
              translateY moves the image up so the diamond sits
              visually centred next to the text. */
-          transform: 'translateY(-4px)',
+          transform: 'translateY(-4px) scaleY(1.25)',
         }}
       />
       <div className="flex flex-col leading-none">
@@ -243,7 +250,7 @@ function NavLogoMini() {
           height: '40px',
           width: 'auto',
           display: 'block',
-          transform: 'translateY(-4px)',
+          transform: 'translateY(-4px) scaleY(1.25)',
         }}
       />
       <span className="text-[14px] font-extrabold text-stone-900 dark:text-white">

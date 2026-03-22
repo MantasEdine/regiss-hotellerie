@@ -22,7 +22,7 @@ export default function Home() {
   const navigate = useNavigate()
   const [slideIdx, setSlideIdx] = useState(0)
   const { fields, handleChange, handleSubmit, status, message } = useContactForm({
-    name: '', hotel: '', phone: '', service: '', delay: '',
+    name: '', hotel: '',email : '', phone: '', service: '', delay: '',
   })
 
   // Auto-advance slideshow every 3.5 seconds
@@ -97,6 +97,7 @@ export default function Home() {
                 <FormField label="Hôtel" value={fields.hotel} onChange={handleChange('hotel')} placeholder="Nom de l'hôtel" required />
               </div>
               <FormField label="Téléphone" type="tel" value={fields.phone} onChange={handleChange('phone')} placeholder="+33 6 52 92 03 87" required />
+              <FormField label="Email" type="email" value={fields.email} onChange={handleChange('email')} placeholder="direction@hotel.fr" required />
               <FormField label="Besoin" type="select" value={fields.service} onChange={handleChange('service')}
                 options={['Réceptionniste de jour','Réceptionniste de nuit','Veilleur de nuit','Agent de sécurité','Voiturier','Femme de chambre','Petit-déjeuner','Caméras / alarmes']} required />
               <FormField label="Délai souhaité" type="select" value={fields.delay} onChange={handleChange('delay')}
