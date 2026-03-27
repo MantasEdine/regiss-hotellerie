@@ -52,7 +52,7 @@ export default function Home() {
             REGIIS met à disposition des hôtels un personnel qualifié — réceptionnistes, sécurité, veilleurs, voituriers et plus. Intervention rapide, formés à vos standards.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-7">
-            <Button variant="primary" size="lg" onClick={() => navigate('/contact')}>Demander un devis gratuit</Button>
+            <Button variant="mauve" size="lg" onClick={() => navigate('/contact')}>Demander un devis gratuit</Button>
             <Button variant="secondary" size="lg" onClick={() => navigate('/services')}>Découvrir nos services →</Button>
           </motion.div>
           <motion.div variants={stagger} className="flex flex-wrap gap-5">
