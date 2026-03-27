@@ -7,7 +7,7 @@ import { Button } from '../ui/index.jsx'
 
 // ── The actual diamond image embedded as base64 ──
 // Same diamond from your original logo PNG, background removed
-const DIAMOND_IMG = "./public/photo_2026-03-27_15-11-44.jpg"
+const DIAMOND_IMG = "./file.svg"
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { dark, toggleDark } = useTheme()
@@ -91,7 +91,7 @@ export default function Navbar() {
               </AnimatePresence>
             </button>
 
-            <Button variant="primary" size="sm" onClick={goContact} className="hidden md:flex">
+            <Button variant="mauve" size="sm" onClick={goContact} className="hidden md:flex">
               Devis gratuit
             </Button>
 
@@ -213,7 +213,7 @@ export default function Navbar() {
 // size=48 → slightly bigger than before (was 32)
 function NavLogo() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2">
       <img
         src={DIAMOND_IMG}
         alt="REGIIS logo"
@@ -224,12 +224,12 @@ function NavLogo() {
           /* The cropped PNG has some transparent space at the bottom.
              translateY moves the image up so the diamond sits
              visually centred next to the text. */
-          transform: 'translateY(-4px) scaleY(1.25)',
+          transform: 'none',
         }}
       />
       <div className="flex flex-col leading-none">
         <span className="text-[17px] font-extrabold text-stone-900 dark:text-white tracking-tight">
-          REGIIS <span className="text-orange-500">HÔTELLERIE</span>
+          REGIIS <span className="text-mauve-600 dark:text-mauve-300">HÔTELLERIE</span>
         </span>
         <span className="text-[7px] font-bold tracking-[3px] uppercase text-mauve-600 dark:text-mauve-400 mt-0.5">
           Solutions hôtelières · 24h/24
@@ -249,11 +249,11 @@ function NavLogoMini() {
           height: '40px',
           width: 'auto',
           display: 'block',
-          transform: 'translateY(-4px) scaleY(1.25)',
+          transform: 'none',
         }}
       />
       <span className="text-[14px] font-extrabold text-stone-900 dark:text-white">
-        REGIIS <span className="text-orange-500">HÔTELLERIE</span>
+        REGIIS <span className="text-mauve-600 dark:text-mauve-300">HÔTELLERIE</span>
       </span>
     </div>
   )
