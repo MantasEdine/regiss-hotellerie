@@ -197,7 +197,7 @@ export default function Navbar() {
                   <span>✉️ contact@regiis.fr</span>
                   <span>🕐 24h/24 · 7j/7 · Jours fériés</span>
                 </div>
-                <Button variant="primary" className="w-full" onClick={goContact}>
+                <Button variant="mauve" className="w-full" onClick={goContact}>
                   Demander un devis →
                 </Button>
               </div>
