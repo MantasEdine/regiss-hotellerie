@@ -17,6 +17,5 @@ dist-ssr
 # OS files
 .DS_Store
 Thumbs.db
-
 # Vite cache
 .vite
